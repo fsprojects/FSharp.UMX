@@ -39,3 +39,9 @@ module UoC =
 
     /// Generic unit of measure cast function
     let inline cast (x : ^a) : ^b = _cast<UnitOfMeasureTC,^a,^b> x
+
+[<AutoOpen>]
+module Operators =
+
+    /// Generic unit of measure cast operator
+    let inline (%%) x = UoC.cast x
