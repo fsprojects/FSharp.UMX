@@ -44,4 +44,4 @@ module UoC =
 module Operators =
 
     /// Generic unit of measure cast operator
-    let inline (%%) x = UoC.cast x
+    let inline (~%%) x = UoC.cast x
