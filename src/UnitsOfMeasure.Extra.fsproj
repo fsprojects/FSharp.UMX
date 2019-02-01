@@ -12,4 +12,7 @@
   <ItemGroup>
     <Content Include="*.fsproj; *.fs" PackagePath="fable\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" Version="4.1.17" />
+  </ItemGroup>
 </Project>
