@@ -1,3 +1,7 @@
+### 1.0.0-beta-003
+
+* Improve API ergonomics @eiriktsarpalis
+
 ### 1.0.0-beta-002
 
 * Add `%%` operator for casting @eiriktsarpalis
