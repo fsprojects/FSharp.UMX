@@ -18,11 +18,11 @@ open UnitsOfMeasure.Extra
 [<Measure>] type dir
 [<Measure>] type file
 
-let inline mkDir x: string<dir> = UoC.cast x
-let inline mkFile x: string<file> = UoC.cast x
+let inline mkDir x: string<dir> = %% x
+let inline mkFile x: string<file> = %% x
 
 let test (dirPath: string<dir>) (fileName: string<file>): unit =
-printfn "FULL PATH: %O/%O" dirPath fileName
+printfn "FULL PATH: %s/%s" %%dirPath %%fileName
 
 let myDir = mkDir "/my/path"
 let myFile = mkFile "file.txt"
