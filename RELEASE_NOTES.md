@@ -1,3 +1,7 @@
+### 1.0.0-beta-005
+
+* Multi-target, lower FSharp.Core version @eiriktsarpalis
+
 ### 1.0.0-beta-004
 
 * Fix #3: Remove Fable.Core dependency @bartelink
