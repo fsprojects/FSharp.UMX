@@ -20,7 +20,7 @@ module private Unsafe =
 #if !FABLE_COMPILER
         (# "" a : 'b #)
 #else
-        unbox<'a, 'b> a
+        unbox<'b> a
 #endif
 
 type UoM =
