@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <Version>1.0.0</Version>
-    <PackageVersion>1.0.0-beta-006</PackageVersion>
+    <PackageVersion>1.0.0-beta-005</PackageVersion>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
     <WarningLevel>5</WarningLevel>
@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="UnitsOfMeasure.Extra.fs" />
+    <Compile Include="FSharp.UMX.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,4 +23,4 @@
     <PackageReference Include="FSharp.Core" Version="3.1.2.5" Condition=" '$(TargetFramework)' == 'net45' " />
     <PackageReference Include="FSharp.Core" Version="4.3.4" Condition=" '$(TargetFramework)' == 'netstandard2.0' " />
   </ItemGroup>
-</Project> 
+</Project>

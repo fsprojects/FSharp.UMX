@@ -1,10 +1,10 @@
-# UnitsOfMeasure.Extra
+# FSharp.UMX
 
 F# Units of Measure for non-numeric types by Eirik Tsarpalis. Compatible with Fable.
 
 ## Installing
 
-Add the `UnitsOfMeasure.Extra` package from Nuget or just copy the `src/UnitsOfMeasure.Extra.fs` file.
+Add the `FSharp.UMX` package from Nuget or just copy the `src/FSharp.UMX.fs` file.
 
 ## Publishing to Nuget
 
@@ -13,7 +13,7 @@ Run `npm i && npm run build publish`.
 ## Usage
 
 ```fsharp
-open UnitsOfMeasure.Extra
+open FSharp.UMX
 
 [<Measure>] type customerId
 [<Measure>] type orderId
@@ -39,11 +39,11 @@ let printOrder (order : Order) =
 let lookupById (orders : Order list) (id : string<orderId>) = orders |> List.tryFind (fun o -> o.id = id)
 
 lookupById [] order.id // compiles
-lookupById [] order.customer // compiler error 
+lookupById [] order.customer // compiler error
 // stdin(94,15): error FS0001: Type mismatch. Expecting a
-//     'string<orderId>'    
+//     'string<orderId>'
 // but given a
-//     'string<customerId>'    
+//     'string<customerId>'
 // The unit of measure 'orderId' does not match the unit of measure 'customerId'
 ```
 

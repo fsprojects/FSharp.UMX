@@ -1,4 +1,4 @@
-namespace UnitsOfMeasure.Extra
+namespace FSharp.UMX
 
 // Units of Measure extensions
 // Provides a mechanism for extending units of measure to non-numeric primitives
@@ -16,14 +16,14 @@ open System
 [<MeasureAnnotatedAbbreviation>] type DateTimeOffset<[<Measure>] 'm> = DateTimeOffset
 
 module private Unsafe =
-    let inline cast<'a, 'b> (a : 'a) : 'b = 
+    let inline cast<'a, 'b> (a : 'a) : 'b =
 #if !FABLE_COMPILER
         (# "" a : 'b #)
 #else
         unbox<'b> a
 #endif
 
-type UoM =
+type UMX =
 
     static member inline tag<[<Measure>]'m> (x : bool) : bool<'m> = Unsafe.cast x
     static member inline tag<[<Measure>]'m> (x : int) : int<'m> = Unsafe.cast x
@@ -70,4 +70,4 @@ module Operators =
 
   // NB the particular infix operator shadows the rarely used quotation splicing operator
   /// Infix operator used for tagging, untagging, or casting units of measure
-  let inline (~%) (x : ^xm) : ^xn = _cast<UoM, ^xm, ^xn> x
+  let inline (~%) (x : ^xm) : ^xn = _cast<UMX, ^xm, ^xn> x

@@ -1,8 +1,8 @@
-module UnitsOfMeasure.Extra.Tests
+module FSharp.UMX.Tests
 
 open System
 open Xunit
-open UnitsOfMeasure.Extra
+open FSharp.UMX
 
 [<Measure>] type skuId
 [<Measure>] type km
@@ -19,10 +19,10 @@ type Record =
 
 [<Fact>]
 let ``Simple unit of measure conversions``() =
-    let x = Guid.NewGuid() |> UoM.tag<skuId>
-    let y = (UoM.untag x).ToString("N") |> UoM.tag<skuId>
-    let z = UoM.tag<km> 42
-    let w = sprintf "%O %s %d" (UoM.untag x) (UoM.untag y) z
+    let x = Guid.NewGuid() |> UMX.tag<skuId>
+    let y = (UMX.untag x).ToString("N") |> UMX.tag<skuId>
+    let z = UMX.tag<km> 42
+    let w = sprintf "%O %s %d" (UMX.untag x) (UMX.untag y) z
     ()
 
 [<Fact>]

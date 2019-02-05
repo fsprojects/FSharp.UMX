@@ -1,8 +1,9 @@
 #load "node_modules/fable-publish-utils/PublishUtils.fs"
 open PublishUtils
 
-// run "npm test"
+run "dotnet test"
+
 match args with
 | IgnoreCase "publish"::_ ->
-    pushNuget "src/UnitsOfMeasure.Extra.fsproj"
+    pushNuget "src/FSharp.UMX.fsproj"
 | _ -> ()

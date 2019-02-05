@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="UnitsOfMeasure.fs" />
+    <Compile Include="FSharp.UMX.Tests.fs" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../src/UnitsOfMeasure.Extra.fsproj" />
+    <ProjectReference Include="../src/FSharp.UMX.fsproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "UnitsOfMeasure.Extra", "src\UnitsOfMeasure.Extra.fsproj", "{194B07ED-714F-48CD-A1E3-E09862D58F60}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.UMX", "src\FSharp.UMX.fsproj", "{194B07ED-714F-48CD-A1E3-E09862D58F60}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "UnitsOfMeasure.Extra.Tests", "tests\UnitsOfMeasure.Extra.Tests.fsproj", "{431B9BEF-AC69-43FF-8CB8-7900E8E0FB83}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.UMX.Tests", "tests\FSharp.UMX.Tests.fsproj", "{431B9BEF-AC69-43FF-8CB8-7900E8E0FB83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
