@@ -1,3 +1,9 @@
+### 1.0.0-preview-001
+
+* Rename to FSharp.UMX @alfonsogarciacaro
+* Support downlevel FSharp.Core on net45 @bartelink
+* Add tests, simplify build scripts @eiriktsarpalis
+
 ### 1.0.0-beta-005
 
 * Multi-target, lower FSharp.Core version @eiriktsarpalis
