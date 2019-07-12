@@ -1,3 +1,7 @@
+### 1.0.0
+
+* Stable release
+
 ### 1.0.0-preview-001
 
 * Rename to FSharp.UMX @alfonsogarciacaro
