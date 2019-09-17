@@ -8,6 +8,7 @@ namespace FSharp.UMX
 open System
 
 [<MeasureAnnotatedAbbreviation>] type bool<[<Measure>] 'm> = bool
+[<MeasureAnnotatedAbbreviation>] type byte<[<Measure>] 'm> = byte
 [<MeasureAnnotatedAbbreviation>] type uint64<[<Measure>] 'm> = uint64
 [<MeasureAnnotatedAbbreviation>] type Guid<[<Measure>] 'm> = Guid
 [<MeasureAnnotatedAbbreviation>] type string<[<Measure>] 'm> = string
@@ -26,6 +27,7 @@ module private Unsafe =
 type UMX =
 
     static member inline tag<[<Measure>]'m> (x : bool) : bool<'m> = Unsafe.cast x
+    static member inline tag<[<Measure>]'m> (x : byte) : byte<'m> = Unsafe.cast x
     static member inline tag<[<Measure>]'m> (x : int) : int<'m> = Unsafe.cast x
     static member inline tag<[<Measure>]'m> (x : int64) : int64<'m> = Unsafe.cast x
     static member inline tag<[<Measure>]'m> (x : uint64) : uint64<'m> = Unsafe.cast x
@@ -38,6 +40,7 @@ type UMX =
     static member inline tag<[<Measure>]'m> (x : DateTimeOffset) : DateTimeOffset<'m> = Unsafe.cast x
 
     static member inline untag<[<Measure>]'m> (x : bool<'m>) : bool = Unsafe.cast x
+    static member inline untag<[<Measure>]'m> (x : byte<'m>) : byte = Unsafe.cast x
     static member inline untag<[<Measure>]'m> (x : int<'m>) : int = Unsafe.cast x
     static member inline untag<[<Measure>]'m> (x : int64<'m>) : int64 = Unsafe.cast x
     static member inline untag<[<Measure>]'m> (x : uint64<'m>) : uint64 = Unsafe.cast x
@@ -50,6 +53,7 @@ type UMX =
     static member inline untag<[<Measure>]'m> (x : DateTimeOffset<'m>) : DateTimeOffset = Unsafe.cast x
 
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : bool<'m1>) : bool<'m2> = Unsafe.cast x
+    static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : byte<'m1>) : byte<'m2> = Unsafe.cast x
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : int<'m1>) : int<'m2> = Unsafe.cast x
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : int64<'m1>) : int64<'m2> = Unsafe.cast x
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : uint64<'m1>) : uint64<'m2> = Unsafe.cast x
