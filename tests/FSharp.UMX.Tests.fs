@@ -32,6 +32,7 @@ let ``Simple unit of measure conversions with cast operator``() =
     let z : int<km> = % 42
     let w : string<foo> = % sprintf "%O %s %d" %x %y %z
     let b : byte<foo> = % 1uy
+    let s : int16<foo> = % 1s
     ()
 
 [<Fact>]
@@ -41,6 +42,7 @@ let ``Simple unit of measure conversions with UMX.tag function``() =
     let z = UMX.tag<km> (42)                          
     let w = UMX.tag<foo> (sprintf "%O %s %d" %x %y %z) 
     let b = UMX.tag<foo> (1uy)                         
+    let s = UMX.tag<foo> (1s)                         
     ()
 
 [<Fact>]
