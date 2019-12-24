@@ -9,7 +9,6 @@ open System
 
 [<MeasureAnnotatedAbbreviation>] type bool<[<Measure>] 'm> = bool
 [<MeasureAnnotatedAbbreviation>] type byte<[<Measure>] 'm> = byte
-[<MeasureAnnotatedAbbreviation>] type int16<[<Measure>] 'm> = int16
 [<MeasureAnnotatedAbbreviation>] type uint64<[<Measure>] 'm> = uint64
 [<MeasureAnnotatedAbbreviation>] type Guid<[<Measure>] 'm> = Guid
 [<MeasureAnnotatedAbbreviation>] type string<[<Measure>] 'm> = string
