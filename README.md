@@ -1,4 +1,4 @@
-# FSharp.UMX [![Build & Tests](https://github.com/fsprojects/FSharp.UMX/actions/workflows/build.yml/badge.svg)](https://github.com/fsprojects/FSharp.UMX/actions/workflows/build.yml) [![release](https://img.shields.io/github/release/fsprojects/FSharp.UMX.svg)](https://github.com/fsprojects/FSharp.UMX/releases) [![NuGet](https://img.shields.io/nuget/vpre/FSharp.UMX.svg)](https://www.nuget.org/packages/FSharp.UMX/) ![code size](https://img.shields.io/github/languages/code-size/fsprojects/FSharp.UMX.svg) [![license](https://img.shields.io/github/license/fsprojects/FSharp.UMX.svg)](LICENSE) 
+# FSharp.UMX [![Build & Tests](https://github.com/fsprojects/FSharp.UMX/actions/workflows/build.yml/badge.svg)](https://github.com/fsprojects/FSharp.UMX/actions/workflows/build.yml) [![NuGet](https://img.shields.io/nuget/vpre/FSharp.UMX.svg)](https://www.nuget.org/packages/FSharp.UMX/) ![code size](https://img.shields.io/github/languages/code-size/fsprojects/FSharp.UMX.svg) [![license](https://img.shields.io/github/license/fsprojects/FSharp.UMX.svg)](LICENSE) 
 
 F# Units of Measure for primitive non-numeric types by Eirik Tsarpalis. Compatible with Fable.
 
