@@ -35,7 +35,6 @@ let ``Simple unit of measure conversions with cast operator``() =
     let b : byte<foo> = % 1uy
     let s : int16<foo> = % 1s
     let f : float32<foo>  = % 10.0f
-    let f : single<foo> = % 10.0f
     ()
 
 [<Fact>]
