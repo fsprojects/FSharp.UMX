@@ -11,8 +11,8 @@
     <Version>1.0.0</Version>
     <PackageVersion>1.0.0</PackageVersion>
 
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
-    <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <WarningLevel>5</WarningLevel>
 
     <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
@@ -28,9 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All" />
-
-    <PackageReference Include="FSharp.Core" Version="3.1.2.5" Condition=" '$(TargetFramework)' == 'net45' " />
-    <PackageReference Include="FSharp.Core" Version="4.3.4" Condition=" '$(TargetFramework)' == 'netstandard2.0' " />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="FSharp.Core" Version="4.3.4" />
   </ItemGroup>
 </Project>
