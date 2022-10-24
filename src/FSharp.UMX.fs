@@ -15,6 +15,10 @@ open System
 [<MeasureAnnotatedAbbreviation>] type TimeSpan<[<Measure>] 'm> = TimeSpan
 [<MeasureAnnotatedAbbreviation>] type DateTime<[<Measure>] 'm> = DateTime
 [<MeasureAnnotatedAbbreviation>] type DateTimeOffset<[<Measure>] 'm> = DateTimeOffset
+#if NET6_0_OR_GREATER
+[<MeasureAnnotatedAbbreviation>] type DateOnly<[<Measure>] 'm> = DateOnly
+[<MeasureAnnotatedAbbreviation>] type TimeOnly<[<Measure>] 'm> = TimeOnly
+#endif
 
 module private Unsafe =
     let inline cast<'a, 'b> (a : 'a) : 'b =
@@ -40,6 +44,10 @@ type UMX =
     static member inline tag<[<Measure>]'m> (x : TimeSpan) : TimeSpan<'m> = Unsafe.cast x
     static member inline tag<[<Measure>]'m> (x : DateTime) : DateTime<'m> = Unsafe.cast x
     static member inline tag<[<Measure>]'m> (x : DateTimeOffset) : DateTimeOffset<'m> = Unsafe.cast x
+#if NET6_0_OR_GREATER
+    static member inline tag<[<Measure>]'m> (x : DateOnly) : DateOnly<'m> = Unsafe.cast x
+    static member inline tag<[<Measure>]'m> (x : TimeOnly) : TimeOnly<'m> = Unsafe.cast x
+#endif
 
     static member inline untag<[<Measure>]'m> (x : bool<'m>) : bool = Unsafe.cast x
     static member inline untag<[<Measure>]'m> (x : byte<'m>) : byte = Unsafe.cast x
@@ -55,6 +63,10 @@ type UMX =
     static member inline untag<[<Measure>]'m> (x : TimeSpan<'m>) : TimeSpan = Unsafe.cast x
     static member inline untag<[<Measure>]'m> (x : DateTime<'m>) : DateTime = Unsafe.cast x
     static member inline untag<[<Measure>]'m> (x : DateTimeOffset<'m>) : DateTimeOffset = Unsafe.cast x
+#if NET6_0_OR_GREATER
+    static member inline untag<[<Measure>]'m> (x : DateOnly<'m>) : DateOnly = Unsafe.cast x
+    static member inline untag<[<Measure>]'m> (x : TimeOnly<'m>) : TimeOnly = Unsafe.cast x
+#endif
 
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : bool<'m1>) : bool<'m2> = Unsafe.cast x
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : byte<'m1>) : byte<'m2> = Unsafe.cast x
@@ -70,6 +82,10 @@ type UMX =
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : TimeSpan<'m1>) : TimeSpan<'m2> = Unsafe.cast x
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : DateTime<'m1>) : DateTime<'m2> = Unsafe.cast x
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : DateTimeOffset<'m1>) : DateTimeOffset<'m2> = Unsafe.cast x
+#if NET6_0_OR_GREATER
+    static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : DateOnly<'m1>) : DateOnly<'m2> = Unsafe.cast x
+    static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : TimeOnly<'m1>) : TimeOnly<'m2> = Unsafe.cast x
+#endif
 
 
 [<AutoOpen>]
