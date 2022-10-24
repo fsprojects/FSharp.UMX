@@ -35,6 +35,9 @@ let ``Simple unit of measure conversions with cast operator``() =
     let b : byte<foo> = % 1uy
     let s : int16<foo> = % 1s
     let f : float32<foo>  = % 10.0f
+    let d : DateTime<foo> = % DateTime.Now
+    let don : DateOnly<foo> = % DateOnly.FromDateTime(DateTime.Now)
+    let ton : TimeOnly<foo> = % TimeOnly.FromDateTime(DateTime.Now)
     ()
 
 [<Fact>]
@@ -45,7 +48,10 @@ let ``Simple unit of measure conversions with UMX.tag function``() =
     let w = UMX.tag<foo> (sprintf "%O %s %d" %x %y %z) 
     let b = UMX.tag<foo> (1uy)                         
     let s = UMX.tag<foo> (1s)                         
-    let f = UMX.tag<foo>  (10.0f)
+    let f = UMX.tag<foo> (10.0f)
+    let d = UMX.tag<foo> DateTime.Now
+    let don = UMX.tag<foo> (DateOnly.FromDateTime(DateTime.Now))
+    let ton = UMX.tag<foo> (TimeOnly.FromDateTime(DateTime.Now))
     ()
 
 [<Fact>]
