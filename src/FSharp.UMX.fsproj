@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="FSharp.Core" Version="4.3.4" />
+    <PackageReference Condition=" '$(TargetFramework)' == 'netstandard2.0' " Include="FSharp.Core" Version="4.3.4" />
+    <PackageReference Condition=" '$(TargetFramework)' == 'net6.0' " Include="FSharp.Core" Version="6.0.7" />
   </ItemGroup>
 </Project>
