@@ -18,6 +18,7 @@ open System
 #if NET6_0_OR_GREATER
 [<MeasureAnnotatedAbbreviation>] type DateOnly<[<Measure>] 'm> = DateOnly
 [<MeasureAnnotatedAbbreviation>] type TimeOnly<[<Measure>] 'm> = TimeOnly
+[<MeasureAnnotatedAbbreviation>] type Half<[<Measure>] 'm> = Half
 #endif
 
 module private Unsafe =
@@ -47,6 +48,7 @@ type UMX =
 #if NET6_0_OR_GREATER
     static member inline tag<[<Measure>]'m> (x : DateOnly) : DateOnly<'m> = Unsafe.cast x
     static member inline tag<[<Measure>]'m> (x : TimeOnly) : TimeOnly<'m> = Unsafe.cast x
+    static member inline tag<[<Measure>]'m> (x : Half) : Half<'m> = Unsafe.cast x
 #endif
 
     static member inline untag<[<Measure>]'m> (x : bool<'m>) : bool = Unsafe.cast x
@@ -66,6 +68,7 @@ type UMX =
 #if NET6_0_OR_GREATER
     static member inline untag<[<Measure>]'m> (x : DateOnly<'m>) : DateOnly = Unsafe.cast x
     static member inline untag<[<Measure>]'m> (x : TimeOnly<'m>) : TimeOnly = Unsafe.cast x
+    static member inline untag<[<Measure>]'m> (x : Half<'m>) : Half = Unsafe.cast x
 #endif
 
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : bool<'m1>) : bool<'m2> = Unsafe.cast x
@@ -85,6 +88,7 @@ type UMX =
 #if NET6_0_OR_GREATER
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : DateOnly<'m1>) : DateOnly<'m2> = Unsafe.cast x
     static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : TimeOnly<'m1>) : TimeOnly<'m2> = Unsafe.cast x
+    static member inline cast<[<Measure>]'m1, [<Measure>]'m2> (x : Half<'m1>) : Half<'m2> = Unsafe.cast x
 #endif
 
 

@@ -23,6 +23,7 @@ let ``Simple unit of measure conversions``() =
     let y = (UMX.untag x).ToString("N") |> UMX.tag<skuId>
     let z = UMX.tag<km> 42
     let f = UMX.tag<km>  10.0f
+    let h = UMX.tag<km>  Half.MinValue
     let w = sprintf "%O %s %d %f" (UMX.untag x) (UMX.untag y) z f
     ()
 
@@ -35,6 +36,7 @@ let ``Simple unit of measure conversions with cast operator``() =
     let b : byte<foo> = % 1uy
     let s : int16<foo> = % 1s
     let f : float32<foo>  = % 10.0f
+    let f : Half<foo>  = % Half.MaxValue
     let d : DateTime<foo> = % DateTime.Now
     let don : DateOnly<foo> = % DateOnly.FromDateTime(DateTime.Now)
     let ton : TimeOnly<foo> = % TimeOnly.FromDateTime(DateTime.Now)
@@ -50,6 +52,7 @@ let ``Simple unit of measure conversions with UMX.tag function``() =
     let s = UMX.tag<foo> (1s)                         
     let f = UMX.tag<foo> (10.0f)
     let d = UMX.tag<foo> DateTime.Now
+    let h = UMX.tag<foo> Half.Epsilon
     let don = UMX.tag<foo> (DateOnly.FromDateTime(DateTime.Now))
     let ton = UMX.tag<foo> (TimeOnly.FromDateTime(DateTime.Now))
     ()
