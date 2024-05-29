@@ -1,3 +1,7 @@
+### 1.1.1
+
+* Use PackageLicenseExpression to please nupkg scanners @bartelink
+
 ### 1.0.0
 
 * Stable release
