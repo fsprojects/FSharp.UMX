@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Authors>@alfonsogarciacaro @eiriktsarpalis</Authors>
     <Description>F# Units of Measure for primitive non-numeric types. Compatible with Fable.</Description>
-    <PackageLicense>MIT</PackageLicense>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/fsprojects/FSharp.UMX</PackageProjectUrl>
     <PackageTags>fsharp unitofmeasure fable</PackageTags>
 
     <Version>1.0.0</Version>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.1.1</PackageVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <WarningLevel>5</WarningLevel>
 
